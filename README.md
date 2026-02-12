@@ -70,7 +70,7 @@ case "$answer" in
     [Nn]* ) echo "Aborted"; exit 1;;
     * ) echo "Invalid response"; exit 1;;
 esac
-</pre>
 echo Rebooting now...
 sleep 10
 sudo reboot
+</pre>
