@@ -3,15 +3,19 @@
 # KDE + Custom Backup Script
 #
 
+BACKUP_DIR="$HOME/kde-backup"
+
 # Check user
 if [ "$EUID" -eq 0 ]; then
     echo "Please run as a normal user, not root"
     exit 1
 fi
 
+rm -r $BACKUP_DIR
+
 # Backup folder
-BACKUP_DIR="$HOME/kde-backup"
 mkdir -p "$BACKUP_DIR/config"
+mkdir -p "$BACKUP_DIR/local/share"
 
 echo "Creating backup in: $BACKUP_DIR"
 
@@ -35,6 +39,7 @@ CONFIG_FILES=(
     "plasma-org.kde.plasma.desktop-appletsrc"
     "kglobalshortcutsrc"
     "kwinrc"
+    "konsolerc"
 )
 
 for f in "${CONFIG_FILES[@]}"; do
@@ -59,5 +64,18 @@ for d in "${CONFIG_DIRS[@]}"; do
     fi
 done
 
-echo "Backup complete ✅"
+# --- Local ---
+LOCAL_ITEMS=(
+    "konsole"
+)
+
+for item in "${LOCAL_ITEMS[@]}"; do
+    if [ -d "$HOME/.local/share/$item" ]; then
+        mkdir -p "$BACKUP_DIR/local/share"
+        cp -a "$HOME/.local/share/$item" "$BACKUP_DIR/local/share/"
+        echo "Backing up local/share/$item"
+    fi
+done
+
+echo "Backup complete!"
 echo "All files are in: $BACKUP_DIR"

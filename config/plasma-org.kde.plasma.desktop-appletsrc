@@ -48,7 +48,8 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][18][Configuration]
-popupHeight=400
+PreloadWeight=60
+popupHeight=450
 popupWidth=560
 
 [Containments][2][Applets][18][Configuration][Appearance]
@@ -67,8 +68,82 @@ PreloadWeight=100
 popupHeight=548
 popupWidth=753
 
+[Containments][2][Applets][3][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][2][Applets][3][Configuration][General]
 favoritesPortedToKAstats=true
+
+[Containments][2][Applets][31]
+immutability=1
+plugin=org.kde.plasma.systemmonitor.cpu
+
+[Containments][2][Applets][31][Configuration]
+CurrentPreset=org.kde.plasma.systemmonitor
+
+[Containments][2][Applets][31][Configuration][Appearance]
+chartFace=org.kde.ksysguard.piechart
+title=Gesamt-CPU-Auslastung
+
+[Containments][2][Applets][31][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][2][Applets][31][Configuration][FaceGrid][Appearance]
+chartFace=org.kde.ksysguard.linechart
+showTitle=false
+
+[Containments][2][Applets][31][Configuration][FaceGrid][SensorColors]
+cpu/all/usage=61,174,233
+
+[Containments][2][Applets][31][Configuration][FaceGrid][Sensors]
+highPrioritySensorIds=["cpu/all/usage"]
+
+[Containments][2][Applets][31][Configuration][SensorColors]
+cpu/all/usage=61,174,233
+
+[Containments][2][Applets][31][Configuration][Sensors]
+highPrioritySensorIds=["cpu/all/usage"]
+lowPrioritySensorIds=["cpu/all/cpuCount","cpu/all/coreCount"]
+totalSensors=["cpu/all/usage"]
+
+[Containments][2][Applets][32]
+immutability=1
+plugin=org.kde.plasma.systemmonitor.net
+
+[Containments][2][Applets][32][Configuration]
+CurrentPreset=org.kde.plasma.systemmonitor
+PreloadWeight=55
+popupHeight=209
+popupWidth=183
+
+[Containments][2][Applets][32][Configuration][Appearance]
+chartFace=org.kde.ksysguard.colorgrid
+title=Network Speed
+updateRateLimit=5000
+
+[Containments][2][Applets][32][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][2][Applets][32][Configuration][FaceGrid][Appearance]
+chartFace=org.kde.ksysguard.linechart
+showTitle=false
+
+[Containments][2][Applets][32][Configuration][FaceGrid][SensorColors]
+network/all/download=61,174,233
+network/all/upload=233,120,61
+
+[Containments][2][Applets][32][Configuration][FaceGrid][Sensors]
+highPrioritySensorIds=["network/all/upload"]
+
+[Containments][2][Applets][32][Configuration][SensorColors]
+network/all/download=61,174,233
+network/all/upload=233,120,61
+
+[Containments][2][Applets][32][Configuration][Sensors]
+highPrioritySensorIds=["network/all/download","network/all/upload"]
 
 [Containments][2][Applets][4]
 immutability=1
@@ -83,6 +158,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][2][Applets][5][Configuration][General]
+groupingStrategy=0
 launchers=applications:systemsettings.desktop,preferred://filemanager,applications:org.kde.konsole.desktop,preferred://browser
 
 [Containments][2][Applets][6]
@@ -94,11 +170,11 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 SystrayContainmentId=8
 
 [Containments][2][General]
-AppletOrder=3;4;5;6;7;18;19
+AppletOrder=3;4;5;6;31;32;7;18;19
 
 [Containments][8]
 activityId=
@@ -130,6 +206,9 @@ plugin=org.kde.plasma.manage-inputmethod
 [Containments][8][Applets][14]
 immutability=1
 plugin=org.kde.plasma.volume
+
+[Containments][8][Applets][14][Configuration]
+PreloadWeight=55
 
 [Containments][8][Applets][14][Configuration][General]
 migrated=true
@@ -169,7 +248,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][23][Configuration]
-PreloadWeight=47
+PreloadWeight=39
 
 [Containments][8][Applets][9]
 immutability=1
