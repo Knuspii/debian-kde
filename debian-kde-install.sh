@@ -16,10 +16,7 @@ kdeconnect \
 kmail \
 konqueror \
 sweeper \
-ktnef \
-kdegraphics-imagemagick \
-kdegraphics-strigi-analyzer \
-kdegraphics-thumbnailers
+ktnef
 
 # Install essentials with apt
 sudo apt install -y \
