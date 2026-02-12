@@ -2,6 +2,8 @@
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Flatpak](https://img.shields.io/badge/flatpak-%234A90D9.svg?style=for-the-badge&logo=flatpak&logoColor=white)
 
+![GitHub License](https://img.shields.io/github/license/knuspii/debian-kde)
+
 # Install Debian with KDE Window-Manager
 
 ## Install Debian
@@ -10,5 +12,5 @@ Go through the install process. \
 At the software selection part only choose the "system tools" and nothing else.
 
 ## Complete install Script with my Configs Etc.:
-Just copy and paste this in your terminal. \
-<code>wget https://github.com/Knuspii/debian-kde/blob/main/debian-kde-install.sh && sudo bash debian-kde-install.sh"</code>
+Just type this in your terminal. \
+<code>wget https://github.com/Knuspii/debian-kde/blob/main/debian-kde-install.sh && sudo bash debian-kde-install.sh</code>
