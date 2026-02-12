@@ -2,7 +2,7 @@
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Flatpak](https://img.shields.io/badge/flatpak-%234A90D9.svg?style=for-the-badge&logo=flatpak&logoColor=white)
 
-# How to install Debian with KDE Window-Manager
+# Install Debian with KDE Window-Manager
 
 ## Install Debian
 Install latest Debian from here: https://www.debian.org/distrib \
