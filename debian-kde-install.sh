@@ -16,7 +16,6 @@ fastfetch \
 git \
 curl \
 wget \
-unrar \
 unzip \
 nmap \
 htop \
