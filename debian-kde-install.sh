@@ -67,7 +67,9 @@ wget -qO "$HOME_DIR/.config/kscreenlockerrc" ${url}/config/kscreenlockerrc
 wget -qO "$HOME_DIR/.config/kwinrc" ${url}/config/kwinrc
 wget -qO "$HOME_DIR/.config/plasma-org.kde.plasma.desktop-appletsrc" ${url}/config/plasma-org.kde.plasma.desktop-appletsrc
 wget -qO "$HOME_DIR/.config/plasmarc" ${url}/config/plasmarc
+wget -qO "$HOME_DIR/.config/konsolerc" ${url}/config/konsolerc
 # Special stuff
+wget -qO "$HOME_DIR/.local/share/konsole/Nice.profile" ${url}/local/share/konsole/Nice.profile
 wget -qO "$HOME_DIR/.config/backup-config.sh" ${url}/config/backup-config.sh
 wget -qO "$HOME_DIR/.config/autostart/conky.desktop" ${url}/config/autostart/conky.desktop
 wget -qO "$HOME_DIR/.config/autostart/terminal.desktopg" ${url}/config/autostart/terminal.desktop
