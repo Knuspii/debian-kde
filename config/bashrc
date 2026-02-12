@@ -1,0 +1,60 @@
+# CUSTOM BASHRC
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=2000
+HISTFILESIZE=20000
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# check the window size after each command and, if necessary,
+shopt -s checkwinsize
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+[ -z "$PS1" ] && return
+
+# Aliase
+alias r='echo Clearing... && sleep 1 && clear && source ~/.bashrc'
+alias dirsize='du -sh * | sort -h'
+alias ls='ls --color=auto'
+alias ll='ls -lah'
+alias la='ls -A'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+
+# Autostart
+if [ -f "$HOME/.starofitrc" ]; then
+    source "$HOME/.starofitrc"
+    date "+%A, %d.%m.%Y - %H:%M:%S"
+    echo "Hostname: $HOSTNAME"
+    echo "IP: $(ip route get 1.1.1.1 | awk '{print $7; exit}')"
+else
+    fastfetch
+    date "+%a, %d.%m.%Y - %H:%M:%S"
+    echo Lil Bro denkt, er wäre im Hacker-Modus
+fi
+PS1='\[\e[1;32m\][\u@\h:\w]\$\[\e[0m\] '
