@@ -1,3 +1,7 @@
+![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
+![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Flatpak](https://img.shields.io/badge/flatpak-%234A90D9.svg?style=for-the-badge&logo=flatpak&logoColor=white)
+
 # How to install Debian with KDE windows manager
 
 ## Install Debian
@@ -8,7 +12,7 @@ At the software selection part only choose the "system tools" and nothing else.
 ## Install KDE
 <pre>
 sudo apt install && sudo apt upgrade -y
-sudo apt install kde-standard sddm konsole dolphin plasma-discover
+sudo apt install kde-standard sddm konsole dolphin plasma-discover -y
 sudo systemctl enable sddm
 sudo reboot
 </pre>
@@ -17,7 +21,7 @@ sudo reboot
 ### Install extras
 <pre>
 sudo apt update && sudo apt upgrade -y
-sudo apt install \
+sudo apt install -y \
 ssh \
 fastfetch \
 git \
@@ -40,8 +44,9 @@ jq \
 <pre>
 sudo apt install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install --assumeyes flathub
 
-flatpak install -y flathub \
+flatpak install --assumeyes \
 org.mozilla.firefox \
 org.libreoffice.LibreOffice \
 com.discordapp.Discord \
