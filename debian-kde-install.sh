@@ -52,9 +52,12 @@ fi
 
 HOME_DIR=$(eval echo "~$USERNAME")
 # Create needed directories
+mkdir -p "$HOME_DIR/.config"
 mkdir -p "$HOME_DIR/.config/conky"
 mkdir -p "$HOME_DIR/.config/wallpaper"
 mkdir -p "$HOME_DIR/.config/autostart"
+mkdir -p "$HOME_DIR/.local/share"
+mkdir -p "$HOME_DIR/.local/share/konsole"
 # Download dotfiles
 wget -qO "$HOME_DIR/.bashrc" ${url}/config/bashrc
 wget -qO "$HOME_DIR/.bash_profile" ${url}/config/bashprofile
