@@ -1,7 +1,8 @@
 [Appearance]
 BorderWhenActive=false
-ColorScheme=Solarized
+ColorScheme=Breeze
 FocusBorderColor=0,170,0
+Font=Fira Code Medium,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Regular
 TabColor=128,255,128
 
 [Cursor Options]
