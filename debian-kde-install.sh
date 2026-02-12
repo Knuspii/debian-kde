@@ -6,7 +6,7 @@
 
 # Update packages and install KDE
 sudo apt update && sudo apt upgrade -y
-sudo apt install kde-standard sddm konsole dolphin plasma-discover -y
+sudo apt install kde-plasma-desktop plasma-nm konsole -y
 sudo systemctl enable sddm
 
 # Remove bloat lol
@@ -15,7 +15,9 @@ firefox-esr \
 kdeconnect \
 kmail \
 konqueror \
-sweeper 
+sweeper \
+ark
+
 
 # Install essentials with apt
 sudo apt install -y \
