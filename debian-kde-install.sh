@@ -15,8 +15,7 @@ firefox-esr \
 kdeconnect \
 kmail \
 konqueror \
-sweeper \
-ktnef
+sweeper 
 
 # Install essentials with apt
 sudo apt install -y \
