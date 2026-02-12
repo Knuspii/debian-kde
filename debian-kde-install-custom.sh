@@ -6,7 +6,7 @@
 
 # Update packages and install KDE
 sudo apt update && sudo apt upgrade -y
-sudo apt install kde-plasma-desktop plasma-nm konsole -y
+sudo apt install kde-plasma-desktop plasma-nm konsole sddm -y
 sudo systemctl enable sddm
 
 # Install essentials with apt
@@ -32,7 +32,7 @@ sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Programs
-flatpak install --assumeyes flathub \
+sudo flatpak install --assumeyes flathub \
 org.mozilla.firefox \
 org.libreoffice.LibreOffice \
 com.discordapp.Discord \
