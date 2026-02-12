@@ -9,16 +9,6 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install kde-plasma-desktop plasma-nm konsole -y
 sudo systemctl enable sddm
 
-# Remove bloat lol
-sudo apt purge -y \
-firefox-esr \
-kdeconnect \
-kmail \
-konqueror \
-sweeper \
-ark
-
-
 # Install essentials with apt
 sudo apt install -y \
 ssh \
