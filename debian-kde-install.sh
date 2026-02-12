@@ -27,6 +27,7 @@ ark
 
 # Install essentials with apt
 apt install -y \
+fonts-firacode \
 ssh \
 fastfetch \
 git \
