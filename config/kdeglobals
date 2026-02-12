@@ -134,8 +134,12 @@ ForegroundVisited=155,89,182
 
 [General]
 ColorSchemeHash=7b61368c55eaab4075e7b1ae9501f3675b0f830f
-font=Noto Sans,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Noto Sans,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+XftSubPixel=none
+fixed=Fira Code,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Fira Code,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Fira Code,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Fira Code Light,8,-1,5,300,0,0,0,0,0,0,0,0,0,0,1,Regular
+toolBarFont=Fira Code,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -160,7 +164,7 @@ View Style=DetailTree
 [WM]
 activeBackground=39,44,49
 activeBlend=252,252,252
-activeFont=Noto Sans,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+activeFont=Fira Code SemiBold,12,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,Regular
 activeForeground=252,252,252
 inactiveBackground=32,36,40
 inactiveBlend=161,169,177
