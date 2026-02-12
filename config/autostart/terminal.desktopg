@@ -1,7 +1,8 @@
 [Desktop Entry]
 Type=Application
-Exec=sh -c "sleep 3 && conky -c ~/.config/conky/conky.config"
+Exec=konsole
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
-Name=Conky
+Name=Konsole
+Comment=Start Terminal at login

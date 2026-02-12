@@ -1,0 +1,17 @@
+[Desktops]
+Id_1=c4c0acf1-d566-4a28-bae4-488be55ea107
+Number=1
+Rows=1
+
+[NightColor]
+Active=true
+Mode=Constant
+
+[Tiling]
+padding=4
+
+[Tiling][50b0f343-0476-5831-aa86-271e9f16661b]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Xwayland]
+Scale=1
