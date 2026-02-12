@@ -4,13 +4,20 @@
 # I made this mainly for me but feel free to use :)
 #
 
+url="https://raw.githubusercontent.com/knuspii/debian-kde/main"
+
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run as root."
+  exit 1
+fi
+
 # Update packages and install KDE
-sudo apt update && sudo apt upgrade -y
-sudo apt install kde-plasma-desktop plasma-nm konsole sddm -y
-sudo systemctl enable sddm
+apt update && apt upgrade -y
+apt install kde-plasma-desktop plasma-nm konsole sddm -y
+systemctl enable sddm
 
 # Install essentials with apt
-sudo apt install -y \
+apt install -y \
 ssh \
 fastfetch \
 git \
@@ -27,12 +34,32 @@ python3 \
 golang \
 jq
 
-# Install Flatpak for special programs
-sudo apt install flatpak -y
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# Ask for target user
+read -p "Enter username: " USERNAME
+if ! id "$USERNAME" &>/dev/null; then
+  echo "User does not exist."
+  exit 1
+fi
+
+HOME_DIR=$(eval echo "~$USERNAME")
+# Create needed directories
+mkdir -p "$HOME_DIR/.config/conky"
+mkdir -p "$HOME_DIR/.config/wallpaper"
+# Download dotfiles
+wget -qO "$HOME_DIR/.bashrc" ${url}/config/bashrc
+wget -qO "$HOME_DIR/.bash_profile" ${url}/config/bashprofile
+# Download configs
+wget -qO "$HOME_DIR/.config/wallpaper/wallpaper.png" ${url}/config/wallpaper/wallpaper.png
+wget -qO "$HOME_DIR/.config/conky/conky.config" ${url}/config/conky/conky.config
+# Fix ownership
+chown -R "$USERNAME:$USERNAME" "$HOME_DIR"
+
+# Install Flatpak
+apt install -y flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Programs
-sudo flatpak install --assumeyes flathub \
+flatpak install --assumeyes flathub \
 org.mozilla.firefox \
 org.libreoffice.LibreOffice \
 com.discordapp.Discord \
@@ -41,7 +68,7 @@ org.gimp.GIMP \
 org.videolan.VLC
 
 # Update all Flatpak programs
-sudo flatpak update --assumeyes
+flatpak update --assumeyes
 
 # Reboot at the end :)
 echo Installation finished!
@@ -53,4 +80,4 @@ case "$answer" in
 esac
 echo Rebooting now...
 sleep 3
-sudo reboot
+reboot
