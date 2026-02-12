@@ -16,7 +16,6 @@ fastfetch \
 git \
 curl \
 wget \
-vlc \
 unrar \
 unzip \
 nmap \
@@ -35,12 +34,13 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 flatpak install --assumeyes flathub
 
 # Programs
-flatpak install --assumeyes \
+flatpak install flatpak --assumeyes \
 org.mozilla.firefox \
 org.libreoffice.LibreOffice \
 com.discordapp.Discord \
 com.visualstudio.code \
-org.gimp.GIMP
+org.gimp.GIMP \
+org.videolan.VLC
 
 # Update all Flatpak programs
 sudo flatpak update --assumeyes
