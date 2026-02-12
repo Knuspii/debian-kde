@@ -11,4 +11,4 @@ At the software selection part only choose the "system tools" and nothing else.
 
 ## Complete install Script with my Configs Etc.:
 Just copy and paste this in your terminal. \
-<code>sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/knuspii/debian-kde/main/debian-kde-install.sh)"</code>
+<code>wget https://github.com/Knuspii/debian-kde/blob/main/debian-kde-install.sh && sudo bash debian-kde-install.sh"</code>
