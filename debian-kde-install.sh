@@ -9,6 +9,18 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install kde-standard sddm konsole dolphin plasma-discover -y
 sudo systemctl enable sddm
 
+# Remove bloat lol
+sudo apt purge -y \
+firefox-esr \
+kdeconnect \
+kmail \
+konqueror \
+sweeper \
+ktnef \
+kdegraphics-imagemagick \
+kdegraphics-strigi-analyzer \
+kdegraphics-thumbnailers
+
 # Install essentials with apt
 sudo apt install -y \
 ssh \
@@ -52,5 +64,5 @@ case "$answer" in
     * ) echo "Invalid response"; exit 1;;
 esac
 echo Rebooting now...
-sleep 10
+sleep 3
 sudo reboot
