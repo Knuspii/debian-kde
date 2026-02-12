@@ -15,6 +15,17 @@ mkdir -p "$BACKUP_DIR/config"
 
 echo "Creating backup in: $BACKUP_DIR"
 
+# --- Bash files (rename without dot) ---
+if [ -f "$HOME/.bashrc" ]; then
+    cp "$HOME/.bashrc" "$BACKUP_DIR/bashrc"
+    echo "Backing up .bashrc → bashrc"
+fi
+
+if [ -f "$HOME/.bash_profile" ]; then
+    cp "$HOME/.bash_profile" "$BACKUP_DIR/bash_profile"
+    echo "Backing up .bash_profile → bash_profile"
+fi
+
 # --- CONFIG files ---
 CONFIG_FILES=(
     "backup-config.sh"
