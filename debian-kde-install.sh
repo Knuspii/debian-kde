@@ -5,7 +5,7 @@
 #
 
 # Update packages and install KDE
-sudo apt install && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo apt install kde-standard sddm konsole dolphin plasma-discover -y
 sudo systemctl enable sddm
 
@@ -43,7 +43,7 @@ com.visualstudio.code \
 org.gimp.GIMP
 
 # Update all Flatpak programs
-sudo flatpak update -y
+sudo flatpak update --assumeyes
 
 # Reboot at the end :)
 echo Installation finished!
