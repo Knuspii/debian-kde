@@ -30,10 +30,9 @@ jq
 # Install Flatpak for special programs
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install --assumeyes flathub
 
 # Programs
-flatpak install flatpak --assumeyes \
+flatpak install --assumeyes flathub \
 org.mozilla.firefox \
 org.libreoffice.LibreOffice \
 com.discordapp.Discord \
@@ -46,7 +45,7 @@ sudo flatpak update --assumeyes
 
 # Reboot at the end :)
 echo Installation finished!
-read -p "D you want to continue? [y/n] " answer
+read -p "Do you want to continue? [y/n] " answer
 case "$answer" in
     [Yy]* ) echo "OK, continuing...";;
     [Nn]* ) echo "Aborted"; exit 1;;
