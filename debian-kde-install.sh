@@ -47,7 +47,7 @@ sudo flatpak update --assumeyes
 
 # Reboot at the end :)
 echo Installation finished!
-read -p "Are you sure you want to continue? [y/n] " answer
+read -p "D you want to continue? [y/n] " answer
 case "$answer" in
     [Yy]* ) echo "OK, continuing...";;
     [Nn]* ) echo "Aborted"; exit 1;;
