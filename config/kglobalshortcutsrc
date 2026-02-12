@@ -30,14 +30,14 @@ mute=Volume Mute,Volume Mute,Stummschalten
 
 [ksmserver]
 Halt Without Confirmation=none,,Ohne Rückfrage herunterfahren
-Lock Session=Meta+L\tScreensaver,Meta+L\tScreensaver,Sitzung sperren
+Lock Session=Meta+L\tScreensaver,Meta+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Abmeldedialog anzeigen
 Log Out Without Confirmation=none,,Ohne Rückfrage abmelden
 LogOut=none,,Abmelden
 Reboot=none,,Neu starten
 Reboot Without Confirmation=none,,Ohne Rückfrage neu starten
 Shut Down=none,,Herunterfahren
-_k_friendly_name=Sitzungsverwaltung
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Meta+Ctrl+A,Meta+Ctrl+A,Fenster aktivieren\\, das Aufmerksamkeit erfordert
