@@ -17,6 +17,8 @@ systemctl enable sddm
 
 # Install essentials with apt
 apt install -y \
+firmware-linux \
+firmware-linux-nonfree \
 ssh \
 curl \
 wget \
