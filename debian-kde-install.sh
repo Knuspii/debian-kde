@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #
-# Script to install Debian & KDE & Extras
-# I made this mainly for me but feel free to use :)
+# Script to install Debian & KDE & my configs
+# I made this mainly for me but feel free to use
+# Made by Knuspii
 #
 
 url="https://raw.githubusercontent.com/knuspii/debian-kde/main"
@@ -16,8 +17,9 @@ apt update && apt upgrade -y
 apt install kde-plasma-desktop plasma-nm konsole sddm -y
 systemctl enable sddm
 
-# Remove bloat lol
+# Remove bloat
 apt purge -y \
+plasma-discover \
 firefox-esr \
 kdeconnect \
 kmail \
@@ -37,6 +39,7 @@ unzip \
 nmap \
 htop \
 tree \
+whois \
 traceroute \
 conky-all \
 wireguard-tools \
@@ -110,3 +113,5 @@ esac
 echo Rebooting now...
 sleep 3
 reboot
+
+exit 0
