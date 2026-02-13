@@ -15,11 +15,6 @@ apt update && apt upgrade -y
 apt install kde-plasma-desktop plasma-nm konsole sddm -y
 systemctl enable sddm
 
-# Remove bloat
-apt purge -y \
-plasma-discover \
-kdeconnect \
-
 # Install essentials with apt
 apt install -y \
 ssh \
