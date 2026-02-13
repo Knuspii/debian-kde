@@ -30,6 +30,8 @@ ark
 
 # Install essentials with apt
 apt install -y \
+firmware-linux \
+firmware-linux-nonfree \
 fonts-firacode \
 ssh \
 fastfetch \
