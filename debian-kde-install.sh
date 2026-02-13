@@ -20,11 +20,12 @@ systemctl enable sddm
 # Remove bloat
 apt purge -y \
 plasma-discover \
-firefox-esr \
+kwalletmanager \
 kdeconnect \
 kmail \
 konqueror \
 sweeper \
+firefox-esr \
 ark
 
 # Install essentials with apt
@@ -106,11 +107,10 @@ flatpak update --assumeyes
 echo Installation finished!
 read -p "Do you want to reboot? [y/n] " answer
 case "$answer" in
-    [Yy]* ) echo "OK, continuing...";;
+    [Yy]* ) echo "OK, rebooting now...";;
     [Nn]* ) echo "Aborted"; exit 1;;
     * ) echo "Invalid response"; exit 1;;
 esac
-echo Rebooting now...
 sleep 3
 reboot
 
