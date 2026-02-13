@@ -11,7 +11,13 @@ Install latest Debian from here: https://www.debian.org/distrib \
 Go through the install process. \
 At the software selection part only choose the "system tools" and nothing else.
 
-## Complete install Script with my Configs Etc.:
+## Complete install Script for just Debian + KDE
+Just type this in your terminal.
+```
+wget https://raw.githubusercontent.com/Knuspii/debian-kde/main/debian-only-kde-install.sh && sudo bash debian-only-kde-install.sh
+```
+
+## Complete install Script with my custom configs:
 Just type this in your terminal.
 ```
 wget https://raw.githubusercontent.com/Knuspii/debian-kde/main/debian-kde-install.sh && sudo bash debian-kde-install.sh
