@@ -10,7 +10,7 @@ HISTFILESIZE=20000
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# check the window size after each command and, if necessary,
+# check the window size after each command
 shopt -s checkwinsize
 
 # enable programmable completion features (you don't need to enable
@@ -24,10 +24,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -37,6 +33,7 @@ fi
 # Aliase
 alias r='echo Clearing... && sleep 1 && clear && source ~/.bashrc'
 alias dirsize='du -sh * | sort -h'
+alias update='sudo apt update && sudo apt upgrade && sudo flatpak update --assumeyes'
 alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias la='ls -A'
@@ -55,6 +52,6 @@ if [ -f "$HOME/.starofitrc" ]; then
 else
     fastfetch
     date "+%a, %d.%m.%Y - %H:%M:%S"
-    echo Lil Bro denkt, er wäre im Hacker-Modus
+    echo Bro denkt, er wäre im Hacker-Modus
 fi
 PS1='\[\e[1;32m\][\u@\h:\w]\$\[\e[0m\] '

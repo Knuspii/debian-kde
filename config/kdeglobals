@@ -141,6 +141,9 @@ menuFont=Fira Code,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 smallestReadableFont=Fira Code Light,8,-1,5,300,0,0,0,0,0,0,0,0,0,0,1,Regular
 toolBarFont=Fira Code,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
+[KDE]
+LookAndFeelPackage=org.kde.breezedark.desktop
+
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
